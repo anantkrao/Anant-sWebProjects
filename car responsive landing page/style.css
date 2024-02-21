@@ -1,0 +1,266 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(to right,rgb(8, 8, 8) 30%,#000f21 70%);
+    background-position: center;
+    background-size: cover;
+}
+.speed_junk{
+    width: 100%;
+}
+.logo{
+    height: 15vh;
+    width: 10vw;
+    overflow: hidden;
+}
+.logo img{
+    height: 15vh;
+    width: 10vw;
+}
+.navbar i{
+    color: white;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-family: "Roboto";
+}
+a:hover{
+    color: orange;
+    border-radius: 100px;
+    font-size: 1.2rem;
+}
+header{
+    padding: 0 2rem;
+    height: 25vh;
+    width: 100%;
+    position: relative;
+}
+.navbar{
+    height: 20vh;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar i{
+    display: none;
+}
+.navbar i:hover{
+    color: orange;
+    font-size:1.2rem;
+    cursor: pointer;
+}
+.navbar .links{
+    display: flex;
+    gap : 2rem;
+}
+.action_bttn{
+background-color: orange;
+color: white;
+padding: .5rem 1rem;
+border-radius: 20px;
+font-size: .8rem;
+font-weight: bold;
+outline: none;
+border: none;
+cursor: pointer;
+}
+.action_bttn:hover{
+    color: white;
+}
+/*Dropdown menu*/
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 3rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background-color: rgb(255, 255, 255,.7);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+    height: 240px;
+}
+.dropdown_menu li{
+    padding: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .action_bttn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.speed_junk{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: none;
+    
+}
+/*second class*/
+.second_class{
+    background-color: none;
+    width: 60%;
+    height: 70vh;
+    padding: 2vh 4vw;
+}
+/*welcome note*/
+.welcome_note{
+    width: 70%;
+    background-color: none;
+    line-height: 5vh;
+    color: white;
+    animation: mytext 20s ease-in;
+}
+@keyframes mytext{
+    100%{transition-delay: 3s;}
+}
+.welcome_note span:hover{
+    font-size: 2rem;
+}
+.welcome_note span{
+    color: #FF7200;
+}
+.welcome_note h2{
+    color: #79AFD2;
+}
+/*rotate car panel*/
+.rotate_car{
+    height: 30vh;
+    width: 30vw;
+    background-color: none;
+    margin-top:2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+}
+.rotate_car img{
+    height: 30vh;
+    width: 28vw;
+    animation: mycar 10s infinite;
+}
+.rotate_car hr{
+    background-color: white;
+}
+@keyframes mycar{
+    100%{transform: rotate3d(0,1,0,360deg);}
+}
+.sec_car{
+    width: 40%;
+    background-color: none;
+    background-image: url('assets/pngegg\ \(1\).png');
+    background-position: center;
+    background-size: 250px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+/*Responsive design*/
+@media (max-width:992px){
+    body{
+        background: linear-gradient(to right,rgb(8, 8, 8) 10%,#000f21 90%);
+    }
+    .navbar .links,.navbar .action_bttn{
+        display: none;
+    }
+    .navbar i{
+        display: block;
+    }
+    .logo{
+        height: 12vh;
+        width: 24vw;
+        overflow: hidden;
+    }
+    .logo img{
+        height: 13vh;
+        width: 17vw;
+    }
+    .dropdown_menu{
+        display: block;
+        width: 200px;
+    }
+    .dropdown_menu a{
+        color: black;
+        font-weight: 700;
+    }
+    .sec_car{
+        display: none;
+    }
+   .second_class{
+    background-color: none;
+    width: 100%;
+    height: 50%;
+   }
+   .rotate_car{
+    margin: 2vh 5vw;
+    background-color: none;
+    width: 100%;
+    height: 50%;
+   }
+   .rotate_car img{
+    width: 60vw;
+    height: 40vh;
+   }
+}
+@media (max-width:576px) {
+    .logo{
+        height: 10vh;
+        width: 22vw;
+        overflow: hidden;
+    }
+    .logo img{
+        height: 10vh;
+        width: 22vw;
+    }
+    .dropdown_menu{
+        display: block;
+        width: 200px;
+    }
+    .dropdown_menu a{
+        color: black;
+        font-weight: 700;
+    }
+    .sec_car{
+        display: none;
+    }
+   .second_class{
+    background-color: none;
+    width: 100%;
+    height: 50%;
+    padding: 0 5vw;
+   }
+   .welcome_note p{
+    font-weight: 700;
+   }
+   .rotate_car{
+    margin: 2vh 5vw;
+    background-color: none;
+    width: 100%;
+    height: 50%;
+   }
+   .rotate_car img{
+    width: 70%;
+    height: 30vh;
+    animation: none;
+   }
+
+}
